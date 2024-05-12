@@ -1,12 +1,35 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --accent-color: #ff8dcb;
+  --main-color: #fff1f7;
+  --theme-switch-color: #353430;
+  --theme-switch-hover-color: #32312d66;
+  --title-color: #ffc2e6;
+  --title-shadow-color: #ff0070;
+  --title-section-color: var(--theme-switch-color, #353430);
+  --title-article-color: var(--theme-switch-color, #353430);
+  --text-color: var(--theme-switch-color, #353430);
+  --link-color: var(--theme-switch-color, #353430);
+  --link-shadow-color: var(--accent-color, #ff8dcb);
+
+  --visibility: hidden;
+  --background-image: url(../images/cover-image-light.png);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: #ff8dcb;
+    --main-color: #fff1f7;
+    --theme-switch-color: #353430;
+    --theme-switch-hover-color: #32312d66;
+    --title-color: #ffc2e6;
+    --title-shadow-color: #ff0070;
+    --title-section-color: var(--theme-switch-color, #353430);
+    --title-article-color: var(--theme-switch-color, #353430);
+    --text-color: var(--theme-switch-color, #353430);
+    --link-color: var(--theme-switch-color, #353430);
+    --link-shadow-color: var(--title-color, #ffc2e6);
+
+    --visibility: hidden;
+    --background-image: url(../images/cover-image-light.png);
+  }
 }

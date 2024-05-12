@@ -1,12 +1,35 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --accent-color: #ff0070;
+  --main-color: #000028;
+  --theme-switch-color: var(--accent-color, #ff0070);
+  --theme-switch-hover-color: #ff007066;
+  --title-color: #db00ff;
+  --title-shadow-color: var(--accent-color, #ff0070);
+  --title-section-color: var(--accent-color, #ff0070);
+  --title-article-color: var(--main-color, #000028);
+  --text-color: #f1b2ce;
+  --link-color: var(--accent-color, #f1b2ce);
+  --link-shadow-color: var(--accent-color, #ff0070);
+
+  --visibility: visible;
+  --background-image: url(../images/cover-image-dark.png);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #ff0070;
+    --main-color: #000028;
+    --theme-switch-color: var(--accent-color, #ff0070);
+    --theme-switch-hover-color: #ff007066;
+    --title-color: #db00ff;
+    --title-shadow-color: var(--accent-color, #ff0070);
+    --title-section-color: var(--accent-color, #ff0070);
+    --title-article-color: var(--main-color, #000028);
+    --text-color: #f1b2ce;
+    --link-color: var(--accent-color, #f1b2ce);
+    --link-shadow-color: var(--accent-color, #ff0070);
+
+    --visibility: visible;
+    --background-image: url(../images/cover-image-dark.png);
+  }
 }
